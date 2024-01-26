@@ -3,4 +3,4 @@ builds:
   default:
     entry: elec/src/esp32-s3.ato:Esp32S3
 dependencies:
-- generics
+- generics^v2.0.0

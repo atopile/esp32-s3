@@ -1,4 +1,4 @@
-import ESP32_S3_WROOM_1_N16R2_ from "ESP32-S3-WROOM-1(N16R2).ato"
+import ESP32_S3_WROOM_1_N16R2_ from "elec/src/ESP32-S3-WROOM-1(N16R2).ato"
 import Power from "generics/interfaces.ato"
 import USB2 from "generics/interfaces.ato"
 import SPI from "generics/interfaces.ato"
@@ -55,6 +55,17 @@ module Esp32S3:
     jtag.vcc ~ power.vcc
     jtag.gnd ~ power.gnd
 
-    # connect up SPI
+    spi2 = new SPI
+    # FSPI default pinout
+    spi2.sck ~ ic.IO12
+    spi2.mosi ~ ic.IO11
+    spi2.miso ~ ic.IO13
+    spi2.cs ~ ic.IO10
+    spi.gnd ~ power.gnd
+
 
     # connect up I2C
+    i2c = new I2C
+    i2c.scl ~ ic.IO6
+    i2c.sda ~ ic.IO7
+

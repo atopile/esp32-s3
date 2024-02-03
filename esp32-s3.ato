@@ -27,6 +27,10 @@ module ESP32S3:
     big_cap_1 = new Capacitor
     big_cap_2 = new Capacitor
 
+    lil_cap.power ~ power
+    big_cap_1.power ~ power
+    big_cap_2.power ~ power
+
     lil_cap.value = 100nF +/- 20%
     big_cap_1.value = 10uF +/- 20%
     big_cap_2.value = 10uF +/- 20%
@@ -61,7 +65,7 @@ module ESP32S3:
     spi2.mosi ~ ic.IO11
     spi2.miso ~ ic.IO13
     spi2.cs ~ ic.IO10
-    spi.gnd ~ power.gnd
+    # spi.gnd ~ power.gnd
 
 
     # connect up I2C

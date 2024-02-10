@@ -1,5 +1,5 @@
 ## Overview
-[atopile](https://atopile.io/) brings the best of software development to the world of hardware design.
+[atopile](https://atopile.io/) is a tool to build electronic circuit boards with code. It brings the best of software development to the world of hardware design.
 
 The atopile package registry contains a list of existing ato packages. Packages usually contain components, module footprints, and layouts that can be reused in other projects.
 

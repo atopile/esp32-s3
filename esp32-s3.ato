@@ -46,9 +46,9 @@ module ESP32S3:
     enable_button.btn -> ButtonSKRPACE010
 
     # connect up USB
-    usb = new USB2
-    usb.dm ~ ic.IO19
-    usb.dp ~ ic.IO20
+    usb2 = new USB2
+    usb2.dm ~ ic.IO19
+    usb2.dp ~ ic.IO20
 
     # connect up JTAG
     jtag = new JTAG

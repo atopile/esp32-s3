@@ -73,3 +73,52 @@ module ESP32S3:
     i2c.scl ~ ic.IO6
     i2c.sda ~ ic.IO7
 
+    # pass through GPIO
+    signal io0 ~ ic.IO0
+    signal io1 ~ ic.IO1
+    signal io2 ~ ic.IO2
+    signal io3 ~ ic.IO3
+    signal io4 ~ ic.IO4
+    signal io5 ~ ic.IO5
+    signal io6 ~ ic.IO6 # Already connected to I2C
+    signal io7 ~ ic.IO7 # Already connected to I2C
+    signal io8 ~ ic.IO8
+    signal io9 ~ ic.IO9
+    signal io10 ~ ic.IO10 # Already connected to SPI
+    signal io11 ~ ic.IO11 # Already connected to SPI
+    signal io12 ~ ic.IO12 # Already connected to SPI
+    signal io13 ~ ic.IO13 # Already connected to SPI
+    signal io14 ~ ic.IO14
+    signal io15 ~ ic.IO15
+    signal io16 ~ ic.IO16
+    signal io17 ~ ic.IO17
+    signal io18 ~ ic.IO18
+    signal io19 ~ ic.IO19 # Already connected to USB2
+    signal io20 ~ ic.IO20 # Already connected to USB2
+    signal io21 ~ ic.IO21
+    signal io22 ~ ic.IO22
+    signal io23 ~ ic.IO23
+    signal io24 ~ ic.IO24
+    signal io25 ~ ic.IO25
+    signal io26 ~ ic.IO26
+    signal io27 ~ ic.IO27
+    signal io28 ~ ic.IO28
+    signal io29 ~ ic.IO29
+    signal io30 ~ ic.IO30
+    signal io31 ~ ic.IO31
+    signal io32 ~ ic.IO32
+    signal io33 ~ ic.IO33
+    signal io34 ~ ic.IO34
+    signal io35 ~ ic.IO35
+    signal io36 ~ ic.IO36
+    signal io37 ~ ic.IO37
+    signal io38 ~ ic.IO38
+    signal io39 ~ ic.IO39 # Already connected to JTAG
+    signal io40 ~ ic.IO40 # Already connected to JTAG
+    signal io41 ~ ic.IO41 # Already connected to JTAG
+    signal io42 ~ ic.IO42 # Already connected to JTAG
+    signal io43 ~ ic.IO43
+    signal io44 ~ ic.IO44
+    signal io45 ~ ic.IO45
+    signal io46 ~ ic.IO46
+

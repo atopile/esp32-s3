@@ -1,6 +1,6 @@
 ato-version: ^0.2.0
 builds:
   default:
-    entry: esp32-s3.ato:ESP32S3
+    entry: elec/src/esp32-s3.ato:ESP32S3
 dependencies:
-- generics^v2.0.0
+- generics^v3.0.0

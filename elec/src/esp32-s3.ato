@@ -1,4 +1,3 @@
-import ESP32_S3_WROOM_1_N16R2_ from "elec/src/ESP32-S3-WROOM-1(N16R2).ato"
 import Power from "generics/interfaces.ato"
 import USB2 from "generics/interfaces.ato"
 import SPI from "generics/interfaces.ato"
@@ -96,19 +95,6 @@ module ESP32S3:
     signal io19 ~ ic.IO19 # Already connected to USB2
     signal io20 ~ ic.IO20 # Already connected to USB2
     signal io21 ~ ic.IO21
-    signal io22 ~ ic.IO22
-    signal io23 ~ ic.IO23
-    signal io24 ~ ic.IO24
-    signal io25 ~ ic.IO25
-    signal io26 ~ ic.IO26
-    signal io27 ~ ic.IO27
-    signal io28 ~ ic.IO28
-    signal io29 ~ ic.IO29
-    signal io30 ~ ic.IO30
-    signal io31 ~ ic.IO31
-    signal io32 ~ ic.IO32
-    signal io33 ~ ic.IO33
-    signal io34 ~ ic.IO34
     signal io35 ~ ic.IO35
     signal io36 ~ ic.IO36
     signal io37 ~ ic.IO37
@@ -117,8 +103,54 @@ module ESP32S3:
     signal io40 ~ ic.IO40 # Already connected to JTAG
     signal io41 ~ ic.IO41 # Already connected to JTAG
     signal io42 ~ ic.IO42 # Already connected to JTAG
-    signal io43 ~ ic.IO43
-    signal io44 ~ ic.IO44
     signal io45 ~ ic.IO45
     signal io46 ~ ic.IO46
+
+component ESP32_S3_WROOM_1_N16R2_:
+    # component ESP32-S3-WROOM-1(N16R2)
+    footprint = "WIRELM-SMD_ESP32-S3-WROOM-1"
+    lcsc_id = "C2913205"
+    mpn = "C2913205"
+    # pins
+    signal GND ~ pin 41
+    GND ~ pin 40
+    signal IO1 ~ pin 39
+    signal IO2 ~ pin 38
+    signal TXD0 ~ pin 37
+    signal RXD0 ~ pin 36
+    signal IO42 ~ pin 35
+    signal IO41 ~ pin 34
+    signal IO40 ~ pin 33
+    signal IO39 ~ pin 32
+    signal IO38 ~ pin 31
+    signal IO37 ~ pin 30
+    signal IO36 ~ pin 29
+    signal IO35 ~ pin 28
+    signal IO0 ~ pin 27
+    signal IO45 ~ pin 26
+    signal IO48 ~ pin 25
+    signal IO47 ~ pin 24
+    signal IO21 ~ pin 23
+    signal IO14 ~ pin 22
+    signal IO13 ~ pin 21
+    signal IO12 ~ pin 20
+    signal IO11 ~ pin 19
+    signal IO10 ~ pin 18
+    signal IO9 ~ pin 17
+    signal IO46 ~ pin 16
+    signal IO3 ~ pin 15
+    signal IO20 ~ pin 14
+    signal IO19 ~ pin 13
+    signal IO8 ~ pin 12
+    signal IO18 ~ pin 11
+    signal IO17 ~ pin 10
+    signal IO16 ~ pin 9
+    signal IO15 ~ pin 8
+    signal IO7 ~ pin 7
+    signal IO6 ~ pin 6
+    signal IO5 ~ pin 5
+    signal IO4 ~ pin 4
+    signal EN ~ pin 3
+    signal _3V3 ~ pin 2
+    GND ~ pin 1
 

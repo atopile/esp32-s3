@@ -27,6 +27,7 @@ module Base:
     ## Power
     power_raw = new Power
     usb_conn = new USBCConn
+    usb_conn.power.gnd ~ power_raw.gnd
     usb_conn.usb2 ~ uc.usb2
     usb_conn.usb2.dp.override_net_name = "usb+"
     usb_conn.usb2.dm.override_net_name = "usb-"

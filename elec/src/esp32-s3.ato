@@ -106,6 +106,7 @@ module ESP32S3:
     signal io45 ~ ic.IO45
     signal io46 ~ ic.IO46
 
+
 component ESP32_S3_WROOM_1_N16R2_:
     # component ESP32-S3-WROOM-1(N16R2)
     footprint = "WIRELM-SMD_ESP32-S3-WROOM-1"
@@ -153,4 +154,3 @@ component ESP32_S3_WROOM_1_N16R2_:
     signal EN ~ pin 3
     signal _3V3 ~ pin 2
     GND ~ pin 1
-

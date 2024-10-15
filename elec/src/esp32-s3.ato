@@ -105,6 +105,8 @@ module ESP32S3:
     signal io42 ~ ic.IO42 # Already connected to JTAG
     signal io45 ~ ic.IO45
     signal io46 ~ ic.IO46
+    signal io47 ~ ic.IO47
+    signal io48 ~ ic.IO48
 
 
 component ESP32_S3_WROOM_1_N16R2_:

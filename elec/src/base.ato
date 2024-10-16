@@ -1,14 +1,16 @@
-from "esp32-s3.ato" import ESP32S3
-from "generics/resistors.ato" import Resistor
-from "generics/capacitors.ato" import Capacitor
 from "bq24045dsqr/elec/src/bq24045dsqr.ato" import BQ24040DSQR
-from "tf-01a/elec/src/tf-01a.ato" import TF_01A
+from "esp32-s3.ato" import ESP32S3
+from "generics/capacitors.ato" import Capacitor
+from "generics/diodes.ato" import SchottkyDiode
+from "generics/interfaces.ato" import Power, SPI, I2C
+from "generics/leds.ato" import LEDIndicatorRed
+from "generics/mosfets.ato" import PFET
+from "generics/resistors.ato" import Resistor
+from "jst_2p.ato" import JST_PH_2P
 from "programming-headers/elec/src/programming-headers.ato" import JTAG_10PIN
 from "sk6805-ec20/elec/src/sk6805-ec20.ato" import SK6805EC20
-from "generics/leds.ato" import LEDIndicatorRed
+from "tf-01a/elec/src/tf-01a.ato" import TF_01A
 from "tps63020dsjr/elec/src/tps63020dsjr.ato" import TPS63020DSJR
-from "jst_2p.ato" import JST_PH_2P
-from "generics/interfaces.ato" import Power, SPI, I2C
 from "usb-connectors/usb-connectors.ato" import USBCConn
 
 
@@ -108,6 +110,27 @@ module BattBase from Base:
     _charger = new BQ24040DSQR
     usb_conn.power ~ _charger.power_in
     _charger.power_batt ~ power_batt
+
+
+component AO3401A from PFET:
+    # component AO3401A
+    footprint = "SOT-23_L2.9-W1.3-P1.90-LS2.4-BR"
+    lcsc_id = "C15127"
+    mpn = "C15127"
+    # pins
+    gate ~ pin 1
+    source ~ pin 2
+    drain ~ pin 3
+
+
+component _1N5819WS from SchottkyDiode:
+    # component _1N5819WS
+    footprint = "SOD-323_L1.8-W1.3-LS2.5-RD"
+    lcsc_id = "C191023"
+    mpn = "C191023"
+    # pins
+    cathode ~ pin 1
+    anode ~ pin 2
 
 
 module PowerPrioritiser:

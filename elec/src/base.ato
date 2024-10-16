@@ -83,6 +83,7 @@ module Base:
     _led = new SK6805EC20
     uc.io1 ~ _led.din.io
     power_3v3 ~ _led.power
+    signal led_dout ~ _led.dout.io
 
     ## I2C for display
     display = new Header4P
@@ -93,8 +94,8 @@ module Base:
     scl_pullup = new Resistor
     sda_pullup.value = i2c_pullup_strength
     scl_pullup.value = i2c_pullup_strength
-    display.i2c.sda ~ sda_pullup.p1; sda_pullup.p2 ~ power_3v3
-    display.i2c.scl ~ scl_pullup.p1; scl_pullup.p2 ~ power_3v3
+    display.i2c.sda ~ sda_pullup.p1; sda_pullup.p2 ~ power_3v3.vcc
+    display.i2c.scl ~ scl_pullup.p1; scl_pullup.p2 ~ power_3v3.vcc
 
 
 module BattBase from Base:

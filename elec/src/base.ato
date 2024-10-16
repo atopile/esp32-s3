@@ -88,6 +88,13 @@ module Base:
     display = new Header4P
     power_3v3 ~ display.power
     uc.i2c ~ display.i2c
+    i2c_pullup_strength = 2.7kΩ +/- 10%
+    sda_pullup = new Resistor
+    scl_pullup = new Resistor
+    sda_pullup.value = i2c_pullup_strength
+    scl_pullup.value = i2c_pullup_strength
+    display.i2c.sda ~ sda_pullup.p1; sda_pullup.p2 ~ power_3v3
+    display.i2c.scl ~ scl_pullup.p1; scl_pullup.p2 ~ power_3v3
 
 
 module BattBase from Base:

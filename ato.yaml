@@ -30,3 +30,7 @@ dependencies:
   version_spec: '@14ee74841ac8a1d311dd1050445bc6b4f300c6bf'
   link_broken: true
   path: elec/src/bq24045dsqr
+- name: power-prioritiser
+  version_spec:
+  link_broken: false
+  path: .ato/modules/power-prioritiser

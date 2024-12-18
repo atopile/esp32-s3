@@ -4,8 +4,8 @@ builds:
     entry: elec/src/esp32-s3.ato:ESP32S3
   base:
     entry: elec/src/base.ato:Base
+
 dependencies:
-- generics^v3.0.0
 - name: tf-01a
   version_spec: '@19f4c986d486c7098b34e129225106d260827def'
   link_broken: true
@@ -34,3 +34,7 @@ dependencies:
   version_spec:
   link_broken: false
   path: .ato/modules/power-prioritiser
+- name: generics
+  version_spec: ^v4.4.0
+  link_broken: false
+  path: .ato/modules/generics

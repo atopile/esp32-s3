@@ -166,7 +166,6 @@
     (net 59 "cd")
     (net 60 "cathode")
     (net 61 "led_dout")
-    (net 63 "_7")
     (footprint "atopile:C0402-b3ef17"
         (layer "F.Cu")
         (uuid "01d81a18-7630-4833-b479-a22b3275479f")
@@ -9533,7 +9532,7 @@
             (remove_unused_layers no)
             (pintype "stereo")
             (uuid "b31fd699-7628-4a7e-bea9-5152ec8e45f7")
-            (net 63 "_7"))
+            (net 0 ""))
         (pad "8" smd rect
             (at 1.27 -2 90)
             (size 0.75 2.4)

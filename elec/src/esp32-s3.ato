@@ -46,7 +46,7 @@ module ESP32S3:
     jtag.tms ~ ic.IO42
     jtag.tdi ~ ic.IO41
     jtag.tdo ~ ic.IO40
-    jtag.vtref ~ power.vcc
+    jtag.vtref ~ power
 
 
     spi2 = new SPI
